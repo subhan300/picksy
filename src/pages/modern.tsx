@@ -43,7 +43,7 @@ const ModernHome: React.FC<{}> = () => (
 		query={`${modernPageStaticQuery}`}
 		render={(data) => {
 			const homeBanner = get(data, "prismic.allHomemoderns.edges[0].node");
-			const adBlocks = get(data, "prismic.allCommons.edges[0].node.ad_blocks");
+			// const adBlocks = get(data, "prismic.allCommons.edges[0].node.ad_blocks");
 			return (
 				<SecondaryLayout>
 					<SEO title="Home" />
@@ -53,7 +53,9 @@ const ModernHome: React.FC<{}> = () => (
 						banner={homeBanner?.banner_image?.url}
 						showActionBtn={false}
 					/>
-					<AdBanner data={adBlocks} scrollTo="#allProducts" scrollOffset={70} />
+					{/* <AdBanner 
+					data={adBlocks} 
+					scrollTo="#allProducts" scrollOffset={70} /> */}
 					<AllProducts />
 				</SecondaryLayout>
 			);
